@@ -1,14 +1,12 @@
 #' Graph box_plot
-#' @param radian
-#' @name box_plot
-#' @description easy way to box plot
+#' @param radian @name box_plot @description easy way to box plot
 #' @return value
 #' @export
 
 
-usethis::use_package("ggplot2")
-usethis::use_package("gridExtra")
-usethis::use_package("dplyr")
+# usethis::use_package("ggplot2")
+# usethis::use_package("gridExtra")
+# usethis::use_package("dplyr")
 
 
 
