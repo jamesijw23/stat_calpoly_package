@@ -10,13 +10,13 @@
 
 
 
-box_plot = function(df,xvar,yvar,main_title){
-  df[, xvar] <- as.factor(df[, xvar])
-  ggplot2::ggplot(df, ggplot2::aes_string(x=xvar, y=yvar)) +
+box_plot = function(df,x_variable,y_variable,main_title){
+  df[, x_variable] <- as.factor(df[, x_variable])
+  ggplot2::ggplot(df, ggplot2::aes_string(x=x_variable, y=y_variable)) +
     ggplot2::geom_boxplot() +
     ggplot2::theme_bw() +
     ggplot2::ggtitle(main_title) +
-    ggplot2::xlab(xvar) +
-    ggplot2::ylab(yvar) +
+    ggplot2::xlab(x_variable) +
+    ggplot2::ylab(y_variable) +
     ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,size = 15, face = "bold"))
 }

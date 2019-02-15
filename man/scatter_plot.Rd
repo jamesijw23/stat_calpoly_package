@@ -3,9 +3,16 @@
 \name{scatter_plot}
 \alias{scatter_plot}
 \title{Graph scatter_plot}
+\usage{
+scatter_plot(df, x_variable, y_variable, point_color = "black",
+  line_color = "red", main_title)
+}
+\arguments{
+\item{radian}{@name scatter_plot @description provides an easy way to view if data is norma;}
+}
 \value{
 value
 }
 \description{
-provides an easy way to view if data is norma;
+Graph scatter_plot
 }

@@ -4,7 +4,7 @@
 \alias{box_plot}
 \title{Graph box_plot}
 \usage{
-box_plot(df, xvar, yvar, main_title)
+box_plot(df, x_variable, y_variable, main_title)
 }
 \arguments{
 \item{radian}{@name box_plot @description easy way to box plot}
