@@ -1,4 +1,6 @@
 #' Graph Normal Distributions
+#' @name normal_plots_check
+#' @description provides an easy way to view if the data is normal
 #' @param radian
 #' @return value
 #' @export

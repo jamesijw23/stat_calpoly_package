@@ -1,5 +1,7 @@
 #' Graph scatter_plot
 #' @param radian
+#' @name scatter_plot
+#' @description provides an easy way to view if data is norma;
 #' @return value
 #' @export
 

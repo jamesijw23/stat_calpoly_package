@@ -1,5 +1,7 @@
 #' Graph box_plot
 #' @param radian
+#' @name box_plot
+#' @description easy way to box plot
 #' @return value
 #' @export
 
