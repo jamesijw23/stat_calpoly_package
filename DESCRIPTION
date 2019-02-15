@@ -1,11 +1,10 @@
 Package: statcalpolypackage
-Type: Package
-Title: What the Package Does (Title Case)
+Type: plotting and statistical inference
+Title: allows students to programs using less complex functions
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Immanuel Williams 
+Maintainer: <imwillia@calpoly.edu>
+Description: Scatter plots, box plots and Normal Density Plots
+License: MIT
 Encoding: UTF-8
 LazyData: true
