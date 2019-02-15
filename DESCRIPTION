@@ -3,7 +3,7 @@ Type: plotting and statistical inference
 Title: allows students to programs using less complex functions
 Version: 0.1.0
 Author: Immanuel Williams 
-Maintainer: <imwillia@calpoly.edu>
+Maintainer: Immanuel <imwillia@calpoly.edu>
 Description: Scatter plots, box plots and Normal Density Plots
 License: MIT
 Encoding: UTF-8
