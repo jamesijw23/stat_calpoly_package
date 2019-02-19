@@ -8,7 +8,7 @@
 
 summarize_anova = function(df, x_variable, y_variable){
 
-  df2 = select(df,x_variable, y_variable)
+  df2 = dplyr::select(df,x_variable, y_variable)
 
   colnames(df2) = c('v1','v2')
   df2$v1 = as.factor(df2$v1)
