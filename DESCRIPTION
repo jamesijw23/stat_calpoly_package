@@ -10,6 +10,7 @@ Encoding: UTF-8
 Imports: 
     ggplot2,
     dplyr,
-    gridExtra
+    gridExtra,
+    psych
 LazyData: true
 RoxygenNote: 6.1.1
