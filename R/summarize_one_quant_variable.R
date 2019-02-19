@@ -7,6 +7,6 @@
 
 summarize_one_quant_variable = function(df,x_variable){
   vec = dplyr::select(df, x_variable)
-  vec = describe(vec)
+  vec = psych::describe(vec)
   return(vec)
 }
