@@ -6,7 +6,7 @@
 
 
 time_series_plot = function(df,stock_date, x_variable, line_color = "red",main_title){
-ggplot2::ggplot(df, ggplot2::aes(stock_date, x_variable)) +
+ggplot2::ggplot(df, ggplot2::aes_string(stock_date, x_variable)) +
   ggplot2::geom_line(color = line_color) +
   ggplot2::theme_bw() +
   ggplot2::ggtitle(main_title) +
