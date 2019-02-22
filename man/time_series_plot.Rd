@@ -4,8 +4,7 @@
 \alias{time_series_plot}
 \title{Graph scatter_plot}
 \usage{
-time_series_plot(df, stock_date, x_variable, line_color = "red",
-  main_title)
+time_series_plot(df, y_variable, line_color = "red", main_title)
 }
 \arguments{
 \item{radian}{@name scatter_plot @description provides an easy way to view if data is norma;}
