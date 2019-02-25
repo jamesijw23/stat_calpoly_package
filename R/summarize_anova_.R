@@ -16,8 +16,8 @@ summarize_anova_ = function(df, x_variable, y_variable){
   sum_table = dplyr::group_by(df2,v1)
   sum_table = dplyr::summarise(sum_table,
                                sample_size_by_group = dplyr::n(),
-                               mean_by_group = mean(v2),
-                               sd_by_group = sd(v2))
+                               mean_by_group = mean(v2,na.rm = T),
+                               sd_by_group = sd(v2,na.rm = T))
   return(sum_table)
 
 }
