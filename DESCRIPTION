@@ -11,6 +11,7 @@ Imports:
     ggplot2,
     dplyr,
     gridExtra,
-    psych
+    psych,
+    zoo
 LazyData: true
 RoxygenNote: 6.1.1

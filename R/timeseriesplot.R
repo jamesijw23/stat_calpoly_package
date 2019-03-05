@@ -1,4 +1,4 @@
-#' Graph scatter_plot
+#' Graph time_series_analysis
 #' @param radian @name scatter_plot @description provides an easy way to view if data is norma;
 #' @return value
 #' @export
