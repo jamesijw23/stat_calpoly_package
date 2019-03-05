@@ -22,7 +22,7 @@ time_series_analysis = function(df,y_variable,smooth_technique,start_date,end_da
     
     y_1 = vec_info[1]
     
-    y_2 = w*vec_info[2] + (1-w)*y1
+    y_2 = w*vec_info[2] + (1-w)*y_1
     
     
     sm_fun = c(y_1,y_2)
@@ -31,18 +31,18 @@ time_series_analysis = function(df,y_variable,smooth_technique,start_date,end_da
       tmp_value = w*vec_info[i+2]  + (1-w)*sm_fun[i+1]
       sm_fun = c(sm_fun,tmp_value)
     }
-    df$s_m = sm_fun
+    df$Smoothed = sm_fun
     smooth_method = paste0("Exponential Smoothing w = ",w,sep='')
   } else if (smooth_technique =="MA"){
     
-    df$s_m = c(rep(NA,L-1),zoo::rollmean(vec_info,k=L))
+    df$Smoothed = c(rep(NA,L-1),zoo::rollmean(vec_info,k=L))
     smooth_method = paste0("Moving Average L = ",L,sep='')
   }
   
   
   
   ## Select appropriate 
-  df = dplyr::select(df,s_m,y_variable,stock_date)
+  df = dplyr::select(df,Smoothed,y_variable,stock_date)
   
   df_mod = reshape2::melt(df, id="stock_date")  
   
@@ -51,13 +51,13 @@ time_series_analysis = function(df,y_variable,smooth_technique,start_date,end_da
     ggplot2::theme_bw() +
     ggplot2::ggtitle(paste0(main_title,' from ',s_d,' to ',e_d,'\n',smooth_method,sep='')) +
     ggplot2::ylab(" Stock Price") +
-    ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,size = 15, face = "bold"))
+    ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,size = 15, face = "bold")) 
   
   colnames(df)[2]='var1'
   
-  ds = dplyr::summarise(df,MSE = mean((s_m - var1)^2, na.rm = TRUE),
-                        MAPE = mean(abs((s_m - var1)/var1), na.rm = TRUE)*100,
-                        MAD = mean(abs((s_m - var1)), na.rm = TRUE))
+  ds = dplyr::summarise(df,MSE = mean((Smoothed - var1)^2, na.rm = TRUE),
+                        MAPE = mean(abs((Smoothed - var1)/var1), na.rm = TRUE)*100,
+                        MAD = mean(abs((Smoothed - var1)), na.rm = TRUE))
   
   return(list(p,ds))
 }
