@@ -51,7 +51,9 @@ time_series_analysis = function(df,y_variable,smooth_technique,start_date,end_da
     ggplot2::theme_bw() +
     ggplot2::ggtitle(paste0(main_title,' from ',s_d,' to ',e_d,'\n',smooth_method,sep='')) +
     ggplot2::ylab(" Stock Price") +
-    ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,size = 15, face = "bold")) 
+    ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,size = 15, face = "bold")) +
+    ggplot2::scale_color_manual("Lines",breaks = c(y_variable, "Smoothed"),
+                       values=c("red", "black"))
   
   colnames(df)[2]='var1'
   
