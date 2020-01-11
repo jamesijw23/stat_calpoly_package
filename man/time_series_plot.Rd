@@ -2,9 +2,10 @@
 % Please edit documentation in R/timeseriesplot.R
 \name{time_series_plot}
 \alias{time_series_plot}
-\title{Graph scatter_plot}
+\title{Graph time_series_analysis}
 \usage{
-time_series_plot(df, y_variable, line_color = "red", main_title)
+time_series_plot(df, y_variable, line_color = "red", main_title,
+  start_date, end_date, by_n = 1)
 }
 \arguments{
 \item{radian}{@name scatter_plot @description provides an easy way to view if data is norma;}
@@ -13,5 +14,5 @@ time_series_plot(df, y_variable, line_color = "red", main_title)
 value
 }
 \description{
-Graph scatter_plot
+Graph time_series_analysis
 }
