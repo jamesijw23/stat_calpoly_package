@@ -1,10 +1,10 @@
 Package: statcalpolypackage
 Type: Package
-Title: allows students to programs using less complex functions
+Title: Allows students to programs using less complex functions
 Version: 0.1.0
 Author: Immanuel Williams 
 Maintainer: Immanuel <imwillia@calpoly.edu>
-Description: Scatter plots, box plots and Normal Density Plots
+Description: Scatter plots, box plots and Normal Density Plots, Summarize Various Types of Data
 License: MIT
 Encoding: UTF-8
 Imports: 
