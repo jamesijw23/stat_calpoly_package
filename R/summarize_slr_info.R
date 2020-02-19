@@ -6,7 +6,8 @@
 
 
 
-summarize_slr_info = function(df, x_variable, y_variable){
+summarize_slr = function(df, x_variable, y_variable){
+
 
   df2 = dplyr::select(df, x_variable, y_variable)
 
