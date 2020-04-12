@@ -25,7 +25,7 @@ summarize_two_quant_groups = function(df, x_variable, y_variable,pair ){
                      df2)
     colnames(df3) = c('v0','v1','v2')
     df4 = tidyr::spread(df3,v1,v2)
-    The_Diff = paste0(colnames(df4)[2],' - ',colnames(df4)[3])
+    The_Diff = paste0(colnames(df4)[3],' - ',colnames(df4)[2])
     colnames(df4)= c('v0','v1','v2')
     df5 = dplyr::mutate(df4,diff = v2 - v1)
     sum_table = data.frame(round(summarize_one_quant_variable(df5,'diff'),4),
