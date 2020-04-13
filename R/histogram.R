@@ -17,8 +17,8 @@ histogram_plot = function(df,x_variable,y_variable='',outline_color = "black", b
   } else if(pair == TRUE){
     numRowVec = nrow(df) ## Number of rows
     id = c(1:(numRowVec/2),1:(numRowVec/2)) ## Create Id
-    tmp1_df = rename(df,exp_var = x_variable,res_var = y_variable) ## Change Names
-    tmp2_df = select(tmp1_df,exp_var,res_var) ## Select Variables
+    tmp1_df = dplyr::rename(df,exp_var = x_variable,res_var = y_variable) ## Change Names
+    tmp2_df = dplyr::select(tmp1_df,exp_var,res_var) ## Select Variables
     tmp3_df = dplyr::mutate(tmp2_df,id =  id) ## Create an Id Variable
     tmp4_df = tidyr::spread(tmp3_df,"exp_var","res_var") ## Transform
     tmp4_df$Diff = tmp4_df[,3] - tmp4_df[,2] ## Find Diff
