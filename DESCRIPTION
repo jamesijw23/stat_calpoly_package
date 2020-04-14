@@ -1,6 +1,6 @@
 Package: statcalpolypackage
 Type: Package
-Title: Allows students to programs using less complex functions
+Title: Allows students to program using less complex functions
 Version: 0.1.0
 Author: Immanuel Williams 
 Maintainer: Immanuel <imwillia@calpoly.edu>
@@ -12,6 +12,7 @@ Imports:
     dplyr,
     gridExtra,
     psych,
-    zoo
+    zoo,
+    tidyr
 LazyData: true
 RoxygenNote: 6.1.1
