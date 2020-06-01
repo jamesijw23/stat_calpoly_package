@@ -19,7 +19,7 @@ summarize_linear_reg = function(df, x_variable, y_variable){
                      sd_y = sd(y,na.rm = T),
                      cor_xy =cor(x,y, use="complete.obs"))
 
-  df = print.data.frame(sum_table)
-  return(df)
+  
+  return(sum_table)
 }
 
