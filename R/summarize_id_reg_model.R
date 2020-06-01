@@ -4,11 +4,11 @@
 #' @export
 
 
-summarize_id_reg_model = function(df,categorical_expl_variable,response_variable){
+summarize_id_reg_model = function(df,categorical_expl_variable,quantitative_expl_variable){
   ## Group by Function
   gb_df = dplyr::group_by_at(df,categorical_expl_variable)
   ## Summarize Data
-  sum_table = dplyr::summarise_at(gb_df,.vars = dplyr::vars(response_variable), 
+  sum_table = dplyr::summarise_at(gb_df,.vars = dplyr::vars(quantitative_expl_variable), 
                              .funs = list(
                                sample_size = ~dplyr::n(),
                                sample_mean = ~mean(., na.rm = TRUE),
