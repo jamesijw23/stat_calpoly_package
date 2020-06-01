@@ -32,8 +32,7 @@ summarize_two_quant_groups = function(df, x_variable, y_variable,pair ){
                            The_Diff)
     rownames(sum_table) = NULL
   }
-  return(sum_table)
-  
+  print.data.frame(sum_table)
 }
 
 

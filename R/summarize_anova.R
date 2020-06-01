@@ -19,5 +19,5 @@ summarize_anova = function(df, x_variable, y_variable){
                                mean_by_group = mean(v2),
                                sd_by_group = sd(v2))
 
-  return(sum_table)
+  print.data.frame(sum_table)
 }

@@ -18,6 +18,6 @@ summarize_anova_ = function(df, x_variable, y_variable){
                                sample_size_by_group = dplyr::n(),
                                mean_by_group = mean(v2,na.rm = T),
                                sd_by_group = sd(v2,na.rm = T))
-  return(sum_table)
+  print.data.frame(sum_table)
 
 }
