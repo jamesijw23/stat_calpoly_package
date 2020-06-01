@@ -54,7 +54,7 @@ scatter_plot_id = function(df,
     ggplot2::xlab(quantitative_expl_variable) +
     ggplot2::scale_color_manual(values=number_colors) +
     ggplot2::ylab(response_variable) +
-    ggplot2::geom_line(aes(y=fit)) +
+    ggplot2::geom_line(ggplot2::aes(y=fit)) +
     ggplot2::theme(plot.title = ggplot2::element_text(hjust = 0.5,
                                                       size = 15, 
                                                       face = "bold"))
