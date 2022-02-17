@@ -1,6 +1,7 @@
 # stat_calpoly_package
 
 I have created some real cool wrapper functions to help teach statistics:
+
 bar_plot - graph catergorical data
 box_plot - Graph quantitative data
 histogram_plot - Graph Histograms
